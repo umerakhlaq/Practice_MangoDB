@@ -44,7 +44,7 @@ project/
 ### 1️⃣ Clone the repository
 
 ```
-**git clone:** https://github.com/umerakhlaq/Practice_MangoDB/
+ **git clone**: https://github.com/umerakhlaq/Practice_MangoDB/
 cd project
 ```
 
@@ -73,7 +73,22 @@ http://localhost:3000
 The project connects to MongoDB using a separate `db.js` file for clean code separation.
 
 ```
-mongoose.connect("mongodb://127.0.0.1:27017/students")
+const { MongoClient } = require("mongodb");
+
+const client = new MongoClient(`mongodb+srv://<username><password>.@cluster0.sxq7fz8.mongodb.net/`);
+
+async function connectDB() {
+    try {
+        await client.connect();
+        console.log("MongoDB Connected Successfully");
+        return client.db("studentsDB");
+    } catch (error) {
+        console.error("Connection Error:", error);
+    }
+}
+
+connectDB();
+
 ```
 
 When successfully connected, it prints:
