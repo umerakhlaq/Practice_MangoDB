@@ -21,12 +21,10 @@ It is ideal for beginners learning MERN stack or anyone who wants a reusable pro
 
 ```
 project/
+│── node_module
+│── src/
+│    └── app.js.js
 │── db.js
-│── models/
-│    └── Student.js
-│── routes/
-│    └── studentRoutes.js
-│── app.js
 └── package.json
 ```
 
@@ -37,7 +35,6 @@ project/
 * **Node.js**
 * **Express.js**
 * **MongoDB**
-* **Mongoose**
 * **CORS**
 
 ---
@@ -47,7 +44,7 @@ project/
 ### 1️⃣ Clone the repository
 
 ```
-git clone <your-repo-url>
+**git clone:** https://github.com/umerakhlaq/Practice_MangoDB/
 cd project
 ```
 
